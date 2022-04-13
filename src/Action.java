@@ -20,6 +20,7 @@ public class Action {
     public ArrayList stringToArray(String s) {
         ArrayList arr = new ArrayList();
         for(int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) >= '0' && s.charAt(i) <= '9')
             arr.add(Integer.parseInt(String.valueOf(s.charAt(i))));
         }
         return arr;

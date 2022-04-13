@@ -16,13 +16,21 @@ public class Main {
             arr.add(arr.size(), random.nextInt(10));
         }
         System.out.println(arr);
-        while (arr.size() != 1 || arr.get(1) != 0){
+        while (true){
             String s = scanner.nextLine();
             arr = action.stringToArray(s);
+            if (arr.isEmpty()) {
+                System.out.println("Computer win!");
+                break;
+            }
             arr = action.action(arr);
             System.out.println(arr);
-
+            if (arr.isEmpty()) {
+                System.out.println("You win!");
+                break;
+            }
         }
+
 
     }
 }
